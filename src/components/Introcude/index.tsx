@@ -20,9 +20,13 @@ export default function Index() {
           commitment and time management abilities. Active content creator on
           LinkedIn and Facebook, sharing programming insights.
         </p>
-        <button type="button" className="btn about-btn mt-4">
+        <a
+          href="../../assets/Cv/Cv.pdf"
+          className="btn about-btn mt-4"
+          download="Cv.pdf"
+        >
           Download my cv
-        </button>
+        </a>
       </div>
     </>
   );

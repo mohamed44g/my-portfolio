@@ -4,7 +4,6 @@ import { FaSquareGithub } from "react-icons/fa6";
 import Navbar from "../../components/Navbar/inedx";
 import "./style.scss";
 export default function Index() {
-
   return (
     <div className="Home" id="home">
       <Navbar />
@@ -13,7 +12,9 @@ export default function Index() {
           <p className="content-paragrapgh">Hello</p>
           <Title2 />
           <p className="content-paragrapgh">Front-End Developer</p>
-          <button className="btn content-btn">Contact Me</button>
+          <a href="#Contact">
+            <button className="btn content-btn">Contact Me</button>
+          </a>
         </div>
 
         <div className="icons d-flex">
