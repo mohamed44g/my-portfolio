@@ -1,0 +1,21 @@
+.close-drawer {
+  color: var(--textColor);
+}
+
+.drawer {
+  padding: 10px;
+  background-color: var(--boxColor) !important;
+
+  .drawer-links {
+    list-style: none;
+
+    a {
+      color: var(--textColor);
+      text-decoration: none;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}

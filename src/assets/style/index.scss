@@ -1,0 +1,84 @@
+@import "../../assets/style/colors.scss";
+@import "../../assets/style/fonts.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  --bgColor: #{$bg-dark-color};
+  --textColor: #{$text-dark-primary};
+  --textSecondary: #{$text-dark-secondary};
+  --primaryColor: #{$primary-color};
+  --boxColor: #{$box-dark-color};
+  --footerColor: #{$footer-dark-color};
+  --btnhover: #{$btn-dark-hover};
+}
+
+.light {
+  --bgColor: #{$bg-light-color};
+  --textColor: #{$text-light-primary};
+  --textSecondary: #{$text-light-secondary};
+  --primaryColor: #{$primary-color};
+  --boxColor: #{$box-light-color};
+  --footerColor: #{$footer-light-color};
+  --btnhover: #{$btn-light-hover};
+}
+
+body {
+  font-family: "Changa";
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  overflow-x: hidden;
+}
+
+.features h2,
+.Courses h2 {
+  color: #fff;
+}
+
+.icons {
+  color: var(--textColor);
+}
+
+.icons:hover {
+  color: var(--primaryColor);
+}
+
+.animated-rotate {
+  animation: FadeInUp 0.7s ease both;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+
+@keyframes rotate-up {
+  0% {
+    transform: translate3d(0, 150px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translate3d(0, 80px, 0);
+  }
+
+  100% {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,23 @@
+.Projects {
+  margin-top: 150px;
+  width: 100vw;
+}
+.cards {
+  margin-top: 80px;
+  gap: 60px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}

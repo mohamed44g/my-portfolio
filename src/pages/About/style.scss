@@ -1,0 +1,114 @@
+.introduce-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .about-btn {
+    outline: 2px solid var(--textColor);
+    color: var(--textColor);
+
+    &:hover {
+      background-color: var(--textColor);
+      color: var(--btnhover);
+    }
+  }
+}
+
+.skills-box {
+  border-radius: 50%;
+  background-color: var(--boxColor);
+  color: var(--textColor);
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  outline: 3px solid var(--primaryColor);
+  font-size: 14px;
+}
+
+.introduce {
+  width: 50%;
+  margin-top: 20px;
+  text-align: justify;
+  visibility: hidden;
+
+  .introduce-text {
+    font-size: 18px;
+    color: var(--textSecondary);
+  }
+}
+
+.skills {
+  width: 50%;
+  visibility: hidden;
+
+  .skills-box-container {
+    gap: 50px;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 992px) {
+  .introduce-cards {
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about-btn {
+      width: 80%;
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  .introduce {
+    width: 100%;
+    .introduce-text {
+      text-align: center;
+    }
+  }
+
+  .skills {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 400px) {
+  .skills {
+    width: 100%;
+
+    .skills-box-container {
+      gap: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .introduce-cards {
+    .about-btn {
+      width: 60%;
+      margin: 20px auto 0 auto;
+    }
+  }
+
+  .skills {
+    .skills-box-container {
+      gap: 60px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .introduce-cards {
+    .about-btn {
+      width: 50%;
+      margin: 20px auto 0 auto;
+    }
+  }
+}

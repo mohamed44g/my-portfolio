@@ -1,0 +1,36 @@
+.features-card {
+  background-color: var(--boxColor);
+  width: 30%;
+  height: 250px;
+  margin: 0 auto;
+  color: var(--textColor);
+  position: relative;
+  visibility: hidden;
+
+  .card-text {
+    margin-top: 10px;
+    color: var(--textSecondary);
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  .features-card {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .features-card {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .features-card {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+}

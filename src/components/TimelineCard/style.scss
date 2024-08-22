@@ -1,0 +1,64 @@
+.timeline-item {
+  position: relative;
+  margin-bottom: 80px;
+  color: #fff;
+}
+
+.timeline-item .timeline-point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.timeline-item .timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  border-radius: 8px;
+  outline: 2px solid var(--primaryColor);
+  visibility: hidden;
+}
+
+.timeline-item.left .timeline-content {
+  left: 53%;
+}
+
+.timeline-item.right .timeline-content {
+  left: 0%;
+  text-align: right;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 400px) {
+    
+    .timeline-item .timeline-content {
+        font-size: 14px;
+      }
+
+    .timeline-item.left .timeline-content {
+        left: 54%;
+    }
+    
+    .timeline-item.right .timeline-content {
+        left: 1%;
+        text-align: right;
+      }
+      
+      .course-date {
+        font-size: 12px;
+      }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}

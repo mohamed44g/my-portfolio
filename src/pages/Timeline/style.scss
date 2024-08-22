@@ -1,0 +1,26 @@
+.Courses {
+  margin: 100px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../../assets//images/person-using-futuristic-virtual-reality-headset-video-games.jpg");
+  background-size: cover;
+  padding-top: 100px;
+  width: 100vw;
+}
+
+.timeline {
+  position: relative;
+  top: 50px;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  bottom: 0;
+  width: 2px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  height: 90%;
+}
