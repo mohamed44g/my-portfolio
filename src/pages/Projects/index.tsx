@@ -3,7 +3,7 @@ import "./style.scss";
 import img1 from "../../assets/images/Screenshot 2024-08-22 105109.png";
 import img2 from "../../assets/images/Screenshot 2024-08-22 095937.png";
 import img3 from "../../assets/images/Screenshot 2024-08-22 100121.png";
-import img4 from "../../assets/images/Screenshot 2024-08-22 100504.png";
+import img4 from "../../assets/images/screenshot-1737907325535.jpeg";
 import ProjectCard from "../../components/projectCard";
 
 export default function index() {
@@ -12,6 +12,13 @@ export default function index() {
       <Title title="Projects" />
       <div className="container">
         <div className="d-flex flex-wrap cards justify-content-center align-items">
+          <ProjectCard
+            title="Tripcraft"
+            description="Travel agency for travel services and booking tickets online"
+            img={img4}
+            preview="https://tripcraft-eta.vercel.app/"
+            codePreview="https://github.com/mohamed44g/Travel-frontend"
+          />
           <ProjectCard
             title="Barca store"
             description="Community and store for Barcelona contain Barça history and the best players"
@@ -34,14 +41,6 @@ export default function index() {
             img={img3}
             preview="https://mohamed44g.github.io/Fit-Gym/"
             codePreview="https://github.com/mohamed44g/Fit-Gym"
-          />
-
-          <ProjectCard
-            title="to-do-list"
-            description="lite to-do app for planning your day and remember your daily tasks."
-            img={img4}
-            preview="https://mohamed44g.github.io/Todolist/"
-            codePreview="https://github.com/mohamed44g/Todolist"
           />
         </div>
       </div>
