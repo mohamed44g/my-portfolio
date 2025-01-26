@@ -30,7 +30,6 @@ export default function Index({
       >
         <div className="img-container">
           <img src={img} className="card-img" alt="Image 4" />
-          <div className="card-img-overlay"></div>
         </div>
         <div className="card-body">
           <h5 className="card-title">{title}</h5>

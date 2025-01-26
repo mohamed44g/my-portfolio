@@ -8,21 +8,11 @@
 
   .card-img {
     width: 100%;
-    margin: 0 auto;
   }
 
   .card-text {
     margin-top: 20px;
     color: var(--textSecondary);
-  }
-
-  .card-img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: inherit;
-    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 
