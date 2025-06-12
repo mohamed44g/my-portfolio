@@ -21,9 +21,9 @@ export default function Index() {
           LinkedIn and Facebook, sharing programming insights.
         </p>
         <a
-          href="../../assets/Cv/Cv.pdf"
+          href="https://raw.githubusercontent.com/mohamed44g/my-portfolio/refs/heads/master/src/assets/Cv/mohamedbadry[frontend].pdf"
           className="btn about-btn mt-4"
-          download="Cv.pdf"
+          download="mohamedbadry[frontend].pdf"
         >
           Download my cv
         </a>
