@@ -20,10 +20,13 @@ export default function Index() {
           <div className="skills-box">Bootstrap</div>
           <div className="skills-box">typescript</div>
           <div className="skills-box">material ui</div>
+          <div className="skills-box">next js</div>
           <div className="skills-box">Node.js</div>
           <div className="skills-box">nest js</div>
           <div className="skills-box">Express</div>
           <div className="skills-box">Postgres sql</div>
+          <div className="skills-box">MongoDb</div>
+          <div className="skills-box">Git</div>
         </div>
       </div>
     </>
