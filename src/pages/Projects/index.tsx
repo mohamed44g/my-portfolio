@@ -1,9 +1,10 @@
 import Title from "../../components/Title";
 import "./style.scss";
 import img1 from "../../assets/images/Screenshot 2024-08-22 105109.png";
-import img2 from "../../assets/images/Screenshot 2024-08-22 095937.png";
+import img2 from "../../assets/images/screenshot-1741016850908.jpeg";
 import img3 from "../../assets/images/Screenshot 2024-08-22 100121.png";
 import img4 from "../../assets/images/screenshot-1737907325535.jpeg";
+import img5 from "../../assets/images/screenshot-1753458935418.jpeg";
 import ProjectCard from "../../components/projectCard";
 
 export default function index() {
@@ -12,6 +13,22 @@ export default function index() {
       <Title title="Projects" />
       <div className="container">
         <div className="d-flex flex-wrap cards justify-content-center align-items">
+          <ProjectCard
+            title="Meda+ academy"
+            description="A medical courses platform that combines simple, clear explanations with scientific content, organizing all lectures, files, and materials in one place. It offers high-quality video lectures, clear categorization by subject and chapter, attached files (PDFs, slides, questions), flexible video access anytime, technical support, and comment sections under each video for questions."
+            img={img5}
+            preview="https://med-aplus.com/"
+            codePreview="#"
+          />
+          <ProjectCard
+            title="Physics Legends"
+            description=" An full stack e-learning website for Physics offers courses, online videos, and quizzes. Students can subscribe to any
+ course, track their progress, and post questions on the community page. Teachers can respond to these questions and
+ either accept or reject the posts. Additionally, students can privately chat with the teacher through the chat section."
+            img={img2}
+            preview="https://mohamed-seliim.com/"
+            codePreview="#"
+          />
           <ProjectCard
             title="Tripcraft"
             description="Travel agency for travel services and booking tickets online"
@@ -25,14 +42,6 @@ export default function index() {
             img={img1}
             preview="https://barca-store.vercel.app/"
             codePreview="https://github.com/mohamed44g/barca-store"
-          />
-
-          <ProjectCard
-            title="Game store"
-            description="Store for sailing video games and get games latest news."
-            img={img2}
-            preview="https://mohamed44g.github.io/Gaming/"
-            codePreview="https://github.com/mohamed44g/Gaming"
           />
 
           <ProjectCard

@@ -18,6 +18,10 @@ export default function Index() {
           <div className="skills-box">JavaScript</div>
           <div className="skills-box">React</div>
           <div className="skills-box">React native</div>
+          <div className="skills-box">Bootstrap</div>
+          <div className="skills-box">typescript</div>
+          <div className="skills-box">Sass</div>
+          <div className="skills-box">material ui</div>
           <div className="skills-box">Node.js</div>
           <div className="skills-box">Express</div>
           <div className="skills-box">MongoDb</div>
