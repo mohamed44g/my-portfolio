@@ -15,7 +15,7 @@ export default function index() {
         <div className="d-flex flex-wrap cards justify-content-center align-items">
           <ProjectCard
             title="Meda+ academy"
-            description="A medical courses platform that combines simple, clear explanations with scientific content, organizing all lectures, files, and materials in one place. It offers high-quality video lectures, clear categorization by subject and chapter, attached files (PDFs, slides), flexible video access anytime, technical support, and comment sections under each video for questions."
+            description="A medical courses platform that combines simple, clear explanations with scientific content, organizing all lectures, files, and materials in one place. It offers high-quality video lectures, clear categorization by subject and chapter, attached files (PDF, slides), flexible video access anytime, technical support, and comment sections under each video for questions."
             img={img5}
             preview="https://med-aplus.com/"
             codePreview="#"
