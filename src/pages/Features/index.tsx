@@ -6,7 +6,7 @@ import { BiSupport } from "react-icons/bi";
 import "./style.scss";
 export default function index() {
   return (
-    <div className="features" id="Features">
+    <section className="features story-section" id="Features">
       <Title title="what can I do?" />
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center cards">
@@ -27,6 +27,6 @@ export default function index() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

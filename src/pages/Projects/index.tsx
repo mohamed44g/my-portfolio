@@ -9,7 +9,7 @@ import ProjectCard from "../../components/projectCard";
 
 export default function index() {
   return (
-    <div className="Projects" id="Projects">
+    <section className="Projects story-section" id="Projects">
       <Title title="Projects" />
       <div className="container">
         <div className="d-flex flex-wrap cards justify-content-center align-items">
@@ -53,6 +53,6 @@ export default function index() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

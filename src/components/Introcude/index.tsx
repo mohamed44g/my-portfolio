@@ -13,19 +13,19 @@ export default function Index() {
         }`}
         ref={myRef}
       >
-        <h2 className="introduce-title">Let me introduce myself</h2>
+        <p className="section-index">01 / THE FOUNDATION</p>
+        <h2 className="introduce-title">From an idea to an experience people enjoy using.</h2>
         <p className="introduce-text mt-4">
-          Experienced front-end developer skilled in HTML, CSS, JavaScript, and
-          React, with knowledge of Node.js, Express, and MongoDB. Strong
-          commitment and time management abilities. Active content creator on
-          LinkedIn and Facebook, sharing programming insights.
+          I&apos;m a full-stack developer who turns complex requirements into clear,
+          fast, and useful products. My work blends a strong front-end eye with
+          practical back-end foundations.
         </p>
         <a
           href="https://raw.githubusercontent.com/mohamed44g/my-portfolio/refs/heads/master/src/assets/Cv/mohamedbadry[frontend].pdf"
           className="btn about-btn mt-4"
           download="mohamedbadry[frontend].pdf"
         >
-          Download my cv
+          Download my CV
         </a>
       </div>
     </>

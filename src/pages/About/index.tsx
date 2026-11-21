@@ -4,12 +4,12 @@ import Introcude from "../../components/Introcude";
 export default function Index() {
   return (
     <>
-      <div className="container" id="About">
+      <section className="story-section container about-section" id="About">
         <div className="introduce-cards">
           <Introcude />
           <Skills />
         </div>
-      </div>
+      </section>
     </>
   );
 }

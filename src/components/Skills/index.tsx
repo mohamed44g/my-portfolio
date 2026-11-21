@@ -11,27 +11,23 @@ export default function Index() {
         className={`skills p-5 mt-5 ${inView && "animated-rotate"}`}
         ref={myRef}
       >
-        <h2>Skills</h2>
+        <p className="section-index">02 / THE TOOLKIT</p>
+        <h2>Tools I reach for to build the next step.</h2>
         <div className="skills-box-container d-flex flex-wrap justify-content-center">
-          <div className="skills-box">HTML</div>
-          <div className="skills-box">CSS</div>
+          <div className="skills-box">HTML / CSS</div>
           <div className="skills-box">JavaScript</div>
           <div className="skills-box">React</div>
-          <div className="skills-box">React native</div>
+          <div className="skills-box">React Native</div>
           <div className="skills-box">Bootstrap</div>
-          <div className="skills-box">typescript</div>
+          <div className="skills-box">TypeScript</div>
           <div className="skills-box">Sass</div>
-          <div className="skills-box">material ui</div>
-
-          <div className="skills-box">Bootstrap</div>
-          <div className="skills-box">typescript</div>
-          <div className="skills-box">material ui</div>
-          <div className="skills-box">next js</div>
+          <div className="skills-box">Material UI</div>
+          <div className="skills-box">Next.js</div>
           <div className="skills-box">Node.js</div>
-          <div className="skills-box">nest js</div>
+          <div className="skills-box">NestJS</div>
           <div className="skills-box">Express</div>
-          <div className="skills-box">Postgres sql</div>
-          <div className="skills-box">MongoDb</div>
+          <div className="skills-box">PostgreSQL</div>
+          <div className="skills-box">MongoDB</div>
           <div className="skills-box">Git</div>
         </div>
       </div>

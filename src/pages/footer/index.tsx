@@ -7,11 +7,11 @@ import { FaSquareGithub } from "react-icons/fa6";
 
 export default function index() {
   return (
-    <footer className="footer" id = "Contact">
+    <footer className="footer story-section" id = "Contact">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-4 mb-3">
-            <div className="card">
+            <div className="card contact-card">
               <div className="icon">
                 <FiPhoneCall color="#0d6efd" />
               </div>
@@ -20,7 +20,7 @@ export default function index() {
             </div>
           </div>
           <div className="col-md-4 mb-3">
-            <div className="card">
+            <div className="card contact-card">
               <div className="icon">
                 <MdOutlineEmail color="#0d6efd" />
               </div>
@@ -29,7 +29,7 @@ export default function index() {
             </div>
           </div>
           <div className="col-md-4 mb-3">
-            <div className="card">
+            <div className="card contact-card">
               <div className="icon">
                 <IoLocationOutline color="#0d6efd" />
               </div>

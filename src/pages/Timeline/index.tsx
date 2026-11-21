@@ -3,7 +3,7 @@ import "./style.scss";
 import TimelineCard from "../../components/TimelineCard";
 export default function Index() {
   return (
-    <div className="Courses" id="Courses">
+    <section className="Courses story-section" id="Courses">
       <Title title="Courses" />
       <div className="container mt-5">
         <div className="row">
@@ -60,6 +60,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

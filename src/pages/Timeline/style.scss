@@ -1,26 +1,2 @@
-.Courses {
-  margin: 100px 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../../assets//images/person-using-futuristic-virtual-reality-headset-video-games.jpg");
-  background-size: cover;
-  padding-top: 100px;
-  width: 100vw;
-}
-
-.timeline {
-  position: relative;
-  top: 50px;
-  padding: 20px 0;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 20px;
-  bottom: 0;
-  width: 2px;
-  background-color: #fff;
-  transform: translateX(-50%);
-  height: 90%;
-}
+.Courses { width:100%; margin:0; padding:7rem 0 6rem; background:linear-gradient(135deg,#05070c,#07142a); }.timeline { position:relative; width:min(100%,950px); margin:3rem auto 0; padding:1rem 0; }.timeline::before { content:""; position:absolute; top:0; bottom:0; left:50%; width:1px; background:linear-gradient(transparent,#0d6efd 10%,#0d6efd 90%,transparent); transform:translateX(-50%); }
+@media (max-width:680px) { .Courses { padding:5rem 0 4rem; }.timeline { margin-top:2rem; }.timeline::before { left:1rem; } }
