@@ -233,6 +233,15 @@ export default function Home() {
     const context = gsap.context(() => {
       const scenes = gsap.utils.toArray<HTMLElement>(".scene");
 
+      const introTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+      introTimeline
+        .fromTo([".particle-stage", ".space-noise"], { autoAlpha: 0 }, { autoAlpha: 1, duration: 1.1 }, 0)
+        .fromTo(".experience-nav", { autoAlpha: 0, y: -18 }, { autoAlpha: 1, y: 0, duration: 0.7 }, 0.08)
+        .fromTo(".particle-name", { autoAlpha: 0, scale: 0.97 }, { autoAlpha: 0.48, scale: 1, duration: 0.9 }, 0.12)
+        .fromTo(".copy-intro .scene-label", { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.48 }, 0.26)
+        .fromTo(".copy-intro h1", { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.7 }, 0.36)
+        .fromTo(".copy-intro .intro-skills p", { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.42, stagger: 0.1 }, 0.62);
+
       scenes.forEach((scene, index) => {
         ScrollTrigger.create({
           trigger: scene,
@@ -263,29 +272,43 @@ export default function Home() {
         });
       });
 
-      gsap.utils.toArray<HTMLElement>(".scene-copy").forEach((copy) => {
-        gsap.fromTo(copy, { autoAlpha: 0, y: 70, scale: 0.96 }, {
-          autoAlpha: 1,
-          y: 0,
-          scale: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: copy.closest(".scene"),
-            start: "top 68%",
-            end: "top 28%",
-            scrub: true,
-            fastScrollEnd: true,
-            invalidateOnRefresh: true,
-          },
+      gsap.utils.toArray<HTMLElement>(".scene-copy:not(.copy-intro)").forEach((copy) => {
+        const scene = copy.closest(".scene");
+        const titles = copy.querySelectorAll<HTMLElement>(":scope > .scene-label, :scope > h2");
+        const details = copy.querySelectorAll<HTMLElement>(
+          ".scene-description, .scene-tags, .skill-group, .journey-list span, .contact-button, .contact-links, .contact-meta",
+        );
+        const prepareEntrance = () => {
+          gsap.set(titles, { autoAlpha: 0, y: 30 });
+          gsap.set(details, { autoAlpha: 0, y: 20 });
+        };
+        prepareEntrance();
+
+        const entrance = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } })
+          .to(titles, { autoAlpha: 1, y: 0, duration: 0.58, stagger: 0.09 })
+          .to(details, { autoAlpha: 1, y: 0, duration: 0.45, stagger: 0.07 }, "<0.18");
+        const revealEntrance = () => {
+          prepareEntrance();
+          entrance.restart();
+        };
+
+        ScrollTrigger.create({
+          trigger: scene,
+          start: "top top",
+          onEnter: revealEntrance,
+          onEnterBack: revealEntrance,
+          onLeaveBack: prepareEntrance,
+          invalidateOnRefresh: true,
         });
-        gsap.to(copy, {
+
+        gsap.to([...titles, ...details], {
           autoAlpha: 0,
-          y: -60,
+          y: -20,
           ease: "none",
           scrollTrigger: {
-            trigger: copy.closest(".scene"),
-            start: "bottom 55%",
-            end: "bottom 20%",
+            trigger: scene,
+            start: "bottom 42%",
+            end: "bottom 18%",
             scrub: true,
             fastScrollEnd: true,
             invalidateOnRefresh: true,
@@ -297,7 +320,28 @@ export default function Home() {
       if (projectRail) {
         const projectCards = gsap.utils.toArray<HTMLElement>(projectRail.querySelectorAll(".project-case"));
         gsap.set(projectCards, { autoAlpha: 0, y: 70, scale: 0.965 });
-        gsap.set(projectCards[0], { autoAlpha: 1, y: 0, scale: 1 });
+        const firstProject = projectCards[0];
+        const prepareFirstProject = () => gsap.set(firstProject, { autoAlpha: 0, y: 50, scale: 0.98 });
+        prepareFirstProject();
+        const revealFirstProject = () => {
+          prepareFirstProject();
+          gsap.to(firstProject, {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.64,
+            ease: "power3.out",
+            overwrite: true,
+          });
+        };
+        ScrollTrigger.create({
+          trigger: ".scene-work",
+          start: "top top",
+          onEnter: revealFirstProject,
+          onEnterBack: revealFirstProject,
+          onLeaveBack: prepareFirstProject,
+          invalidateOnRefresh: true,
+        });
         const projectTimeline = gsap.timeline({
           defaults: { ease: "none" },
           scrollTrigger: {
@@ -317,22 +361,39 @@ export default function Home() {
             .fromTo(projectCards[index + 1], { autoAlpha: 0, y: 70, scale: 0.965 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.32 }, ">-0.02")
             .to({}, { duration: 0.55 });
         });
-        gsap.from(".projects-heading", {
-          autoAlpha: 0,
-          y: 35,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".scene-work",
-            start: "top 72%",
-            end: "top 40%",
-            scrub: true,
-            fastScrollEnd: true,
-            invalidateOnRefresh: true,
-          },
+        const projectHeading = gsap.utils.toArray<HTMLElement>(".projects-heading .scene-label, .projects-heading h2");
+        const prepareProjectHeading = () => gsap.set(projectHeading, { autoAlpha: 0, y: 28 });
+        prepareProjectHeading();
+        const revealProjectHeading = () => {
+          prepareProjectHeading();
+          gsap.to(projectHeading, { autoAlpha: 1, y: 0, duration: 0.58, ease: "power3.out", stagger: 0.08, overwrite: true });
+        };
+        ScrollTrigger.create({
+          trigger: ".scene-work",
+          start: "top top",
+          onEnter: revealProjectHeading,
+          onEnterBack: revealProjectHeading,
+          onLeaveBack: prepareProjectHeading,
+          invalidateOnRefresh: true,
         });
       }
+
+      ScrollTrigger.refresh();
     }, root);
-    return () => context.revert();
+    let active = true;
+    const refresh = () => {
+      if (active) ScrollTrigger.refresh();
+    };
+    const refreshFrame = window.requestAnimationFrame(refresh);
+    window.addEventListener("load", refresh, { once: true });
+    document.fonts?.ready.then(refresh);
+
+    return () => {
+      active = false;
+      window.cancelAnimationFrame(refreshFrame);
+      window.removeEventListener("load", refresh);
+      context.revert();
+    };
   }, []);
 
   useEffect(() => {
@@ -432,7 +493,11 @@ export default function Home() {
           <div className="scene-copy copy-intro">
             <p className="scene-label">MOHAMED BADRY — FULL-STACK DEVELOPER</p>
             <h1>Digital products<br /><span>that feel alive.</span></h1>
-            <div className="intro-skills"><p><b>React</b><small>Front-end</small></p><p><b>Node.js</b><small>Back-end</small></p><p><b>React Native</b><small>Mobile</small></p></div>
+            <div className="intro-skills">
+              <p><b>React</b><small>Front-end</small></p>
+              <p><b>Node.js</b><small>Back-end</small></p>
+              <p><b>React Native</b><small>Mobile</small></p>
+            </div>
           </div>
         </div>
       </section>
